@@ -1,0 +1,13 @@
+Hello
+world
+' '' " ""
+\' \'\' \" \"\" #!
+#!
+echo hello
+date
+for i in 1 2 3; do
+	echo "$i"
+done
+echo Args: $1 $2
+#!
+bye
