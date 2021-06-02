@@ -6,7 +6,7 @@ endif
 
 install: man
 	install pp.awk $(DESTDIR)$(PREFIX)/bin/
-	install -m 644 pp.awk.1 $(DESTDIR)$(PREFIX)/man/man1/
+	install -D -m 644 pp.awk.1 $(DESTDIR)$(PREFIX)/share/man/man1/pp.awk.1
 
 uninstall:
 	rm -f $(DESTDIR)$(PREFIX)/bin/pp.awk
