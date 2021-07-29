@@ -49,6 +49,31 @@ world
 \'"'"' \'"'"'\'"'"' \" \"\"'
 ```
 
+On the other hand you can't reference any variables in verbatim text. HTML
+[example](https://www.mkws.sh/pp.html) from pp's site won't work in pp.awk.
+
+Instead you have to write:
+
+```
+<!doctype html>
+<title>pp.awk example</title>
+<ul>
+#!
+i=1
+while test $i -le 10
+do
+	if test $((i % 2)) -eq 0
+	then
+		echo "	<li class=even>$i</li>"
+	else
+		echo "	<li class=odd>$i</li>"
+	fi
+	i=$((i + 1))
+done
+#!
+</ul>
+```
+
 ### Parameters
 
 You can pass parameters to template as follows
