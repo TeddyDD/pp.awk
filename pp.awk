@@ -1,4 +1,6 @@
-#!/usr/bin/awk -f
+#!/usr/bin/env -S awk -f
+# Simple preprocessor
+# Put shell code between #!\n tokens.
 
 function swch() {
 	script = (script + 1) % 2
